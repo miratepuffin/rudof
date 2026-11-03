@@ -1,13 +1,16 @@
 [package]
-name = "mie"
+name = "pometry-mie"
 version.workspace = true
 authors.workspace = true
-description.workspace = true
+description = "Pometry's fork of rudof's mie: RDF and Knowledge Graphs processing tool"
 edition.workspace = true
 license.workspace = true
-documentation = "https://docs.rs/mie"
-homepage.workspace = true
-repository.workspace = true
+documentation = "https://docs.rs/pometry-mie"
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "mie"
 
 [dependencies]
 hashlink.workspace = true

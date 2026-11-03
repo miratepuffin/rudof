@@ -1,13 +1,16 @@
 [package]
-name = "rudof_rdf"
+name = "pometry-rudof_rdf"
 version.workspace = true
 authors.workspace = true
-description.workspace = true
-documentation = "https://docs.rs/rdf"
+description = "Pometry's fork of rudof's rudof_rdf: RDF and Knowledge Graphs processing tool"
+documentation = "https://docs.rs/pometry-rudof_rdf"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "rudof_rdf"
 
 [features]
 default = ["sparql"]

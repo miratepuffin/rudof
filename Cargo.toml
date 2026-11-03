@@ -286,27 +286,27 @@ itertools = "0.14"
 lbug = "0.19"
 josekit = "0.10.3"
 lazy-regex = "3.4"
-mie = { version = "0.3.36", path = "./mie" }
+mie = { package = "pometry-mie", version = "0.3.36", path = "./mie" }
 nom = "8.0"
 nom_locate = "5.0"
 once_cell = "1.18.0"
 openssl = { version = "0.10", features = ["vendored"] }
-oxigraph = { version = "0.5.9", default-features = false, features = [
+oxigraph = { package = "pometry-oxigraph", version = "0.5.13", default-features = false, features = [
     "rdf-12",
 ] }
 oxilangtag = { version = "0.1.6", features = ["serde"] }
 oxiri = { version = "0.3.1" }
 oxjsonld = { version = "0.2.5", features = ["rdf-12"] }
 oxrdf = { version = "0.3.3", features = ["oxsdatatypes", "rdf-12"] }
-oxrdfio = { version = "0.2.5", features = ["rdf-12"] }
-oxrdfxml = { version = "0.2.3", features = ["rdf-12"] }
+oxrdfio = { package = "pometry-oxrdfio", version = "0.2.7", features = ["rdf-12"] }
+oxrdfxml = { package = "pometry-oxrdfxml", version = "0.2.5", features = ["rdf-12"] }
 oxsdatatypes = "0.2.2"
-oxttl = { version = "0.2.3", features = ["rdf-12"] }
+oxttl = { package = "pometry-oxttl", version = "0.2.5", features = ["rdf-12"] }
 paste = "1.0.15"
 pgschema = { version = "0.3.36", path = "./pgschema" }
 petgraph = { version = "0.8", features = ["serde-1"] }
 postcard = { version = "1", features = ["use-std"] }
-prefixmap = { version = "0.3.36", path = "./prefixmap" }
+prefixmap = { package = "pometry-prefixmap", version = "0.3.36", path = "./prefixmap" }
 pretty = { version = "0.12" }
 proptest = { version = "1.11.0", default-features = false, features = [
     "std",
@@ -330,11 +330,11 @@ rmcp = { version = "3.6", features = [
     "transport-streamable-http-server",
 ] }
 rudof_cli = { version = "0.3.36", path = "./rudof_cli" }
-rudof_config = { version = "0.3.36", path = "./rudof_config" }
-rudof_iri = { version = "0.3.36", path = "./rudof_iri" }
-rudof_rdf = { version = "0.3.36", path = "./rudof_rdf", default-features = false }
-rudof_typing = { version = "0.3.36", path = "./rudof_typing" }
-rudof_viz = { version = "0.3.36", path = "./rudof_viz" }
+rudof_config = { package = "pometry-rudof_config", version = "0.3.36", path = "./rudof_config" }
+rudof_iri = { package = "pometry-rudof_iri", version = "0.3.36", path = "./rudof_iri" }
+rudof_rdf = { package = "pometry-rudof_rdf", version = "0.3.36", path = "./rudof_rdf", default-features = false }
+rudof_typing = { package = "pometry-rudof_typing", version = "0.3.36", path = "./rudof_typing" }
+rudof_viz = { package = "pometry-rudof_viz", version = "0.3.36", path = "./rudof_viz" }
 rudof_generate = { version = "0.3.36", path = "./rudof_generate" }
 rudof_lib = { version = "0.3.36", path = "./rudof_lib" }
 rudof_mcp = { version = "0.3.36", path = "./rudof_mcp" }
@@ -349,16 +349,16 @@ schemars = "1.0.4"
 semver = { version = "1.0", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1.0"
-shacl = { version = "0.3.36", path = "./shacl" }
+shacl = { package = "pometry-shacl", version = "0.3.36", path = "./shacl" }
 shapes_comparator = { version = "0.3.36", path = "./shapes_comparator" }
 shapes_converter = { version = "0.3.36", path = "./shapes_converter" }
 shex_ast = { version = "0.3.36", path = "./shex_ast" }
 shex_testsuite = { version = "0.3.36", path = "./shex_testsuite" }
 shex_validation = { version = "0.3.36", path = "./shex_validation" }
 shlex = "1.3"
-sparesults = { version = "0.3.0", features = ["sparql-12"] }
-spargebra = { version = "0.4.0", features = ["sparql-12"] }
-sparql_service = { version = "0.3.36", path = "./sparql_service", default-features = false }
+sparesults = { package = "pometry-sparesults", version = "0.3.5", features = ["sparql-12"] }
+spargebra = { package = "pometry-spargebra", version = "0.4.8", features = ["sparql-12"] }
+sparql_service = { package = "pometry-sparql_service", version = "0.3.36", path = "./sparql_service", default-features = false }
 stacker = "0.1"
 supports-color = "3.0.0"
 tabled = { version = "0.20.0", features = ["ansi"] }

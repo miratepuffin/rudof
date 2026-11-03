@@ -1,13 +1,16 @@
 [package]
-name = "rudof_viz"
+name = "pometry-rudof_viz"
 version.workspace = true
 authors.workspace = true
-description = "Technology-agnostic visualization primitives (styles, diagram model, renderer traits) for rudof"
-documentation = "https://docs.rs/rudof_viz"
+description = "Pometry's fork of rudof's rudof_viz: Technology-agnostic visualization primitives (styles, diagram model, renderer traits) for rudof"
+documentation = "https://docs.rs/pometry-rudof_viz"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "rudof_viz"
 
 [dependencies]
 serde.workspace = true

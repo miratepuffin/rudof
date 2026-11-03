@@ -1,13 +1,16 @@
 [package]
-name = "sparql_service"
+name = "pometry-sparql_service"
 version.workspace = true
 authors.workspace = true
-description.workspace = true
+description = "Pometry's fork of rudof's sparql_service: RDF and Knowledge Graphs processing tool"
 edition.workspace = true
 license.workspace = true
-documentation = "https://docs.rs/sparql_service"
-homepage.workspace = true
-repository.workspace = true
+documentation = "https://docs.rs/pometry-sparql_service"
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "sparql_service"
 
 [features]
 default = ["sparql"]

@@ -1,13 +1,16 @@
 [package]
-name = "rudof_iri"
+name = "pometry-rudof_iri"
 version.workspace = true
 authors.workspace = true
-description.workspace = true
-documentation = "https://docs.rs/rudof_iri"
+description = "Pometry's fork of rudof's rudof_iri: RDF and Knowledge Graphs processing tool"
+documentation = "https://docs.rs/pometry-rudof_iri"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "rudof_iri"
 
 [dependencies]
 getrandom.workspace = true

@@ -1,14 +1,17 @@
 [package]
-name = 'shacl'
+name = "pometry-shacl"
 version.workspace = true
 readme = "README.md"
 authors.workspace = true
-description = "A SHACL validator for RDF data, implemented in Rust."
-documentation = "https://docs.rs/shacl"
+description = "Pometry's fork of rudof's shacl: A SHACL validator for RDF data, implemented in Rust."
+documentation = "https://docs.rs/pometry-shacl"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "shacl"
 
 [features]
 default = ["sparql"]

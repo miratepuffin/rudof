@@ -64,7 +64,7 @@ jobs:
       # Feature unification turns `shacl/sparql` on in the workspace check above,
       # so check the configurations used by the wasm bindings separately.
       - name: Run cargo check on shacl without sparql
-        run: cargo check -p shacl --no-default-features --target wasm32-unknown-unknown
+        run: cargo check -p pometry-shacl --no-default-features --target wasm32-unknown-unknown
       - name: Run cargo check on the wasm bindings
         run: cargo check -p rudof_wasm --all-targets --target wasm32-unknown-unknown
       - name: Run cargo check on the wasm bindings without optional features

@@ -40,7 +40,7 @@ endpoints = ["rudof_lib/jspi", "dep:rudof_rdf", "rudof_rdf/jspi"]
 # A path dependency, because workspace inheritance can't switch off default
 # features.
 rudof_lib = { path = "../../rudof_lib", default-features = false, features = ["sparql"] }
-rudof_rdf = { path = "../../rudof_rdf", default-features = false, optional = true }
+rudof_rdf = { package = "pometry-rudof_rdf", path = "../../rudof_rdf", default-features = false, optional = true }
 serde.workspace = true
 
 [target.'cfg(target_family = "wasm")'.dependencies]

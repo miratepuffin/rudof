@@ -1,13 +1,16 @@
 [package]
-name = "prefixmap"
+name = "pometry-prefixmap"
 version.workspace = true
 authors.workspace = true
-description.workspace = true
-documentation = "https://docs.rs/prefixmap"
+description = "Pometry's fork of rudof's prefixmap: RDF and Knowledge Graphs processing tool"
+documentation = "https://docs.rs/pometry-prefixmap"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "prefixmap"
 
 [dependencies]
 colored.workspace = true

@@ -1,13 +1,16 @@
 [package]
-name = "rudof_config"
+name = "pometry-rudof_config"
 version.workspace = true
 authors.workspace = true
-description = "Library for managing configuration files in rudof"
-documentation = "https://docs.rs/rudof_config"
+description = "Pometry's fork of rudof's rudof_config: Library for managing configuration files in rudof"
+documentation = "https://docs.rs/pometry-rudof_config"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "rudof_config"
 
 [dependencies]
 serde.workspace = true

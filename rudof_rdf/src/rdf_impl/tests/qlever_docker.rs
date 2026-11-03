@@ -3,7 +3,7 @@
 //! Gated behind the `qlever-docker-tests` feature so plain `cargo test` runs in environments without Docker. Enable with:
 //!
 //! ```bash
-//! cargo test -p rudof_rdf --features qlever-docker-tests --lib rdf_impl::tests::qlever_docker -- --nocapture
+//! cargo test -p pometry-rudof_rdf --features qlever-docker-tests --lib rdf_impl::tests::qlever_docker -- --nocapture
 //! ```
 
 use crate::rdf_impl::{CliKind, Compression, QleverConfig, QleverGraphContainer, decompressor_probe, qlever_probe_cli};

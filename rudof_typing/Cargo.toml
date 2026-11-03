@@ -1,13 +1,16 @@
 [package]
-name = "rudof_typing"
+name = "pometry-rudof_typing"
 version.workspace = true
 authors.workspace = true
-description.workspace = true
-documentation = "https://docs.rs/rudof_typing"
+description = "Pometry's fork of rudof's rudof_typing: RDF and Knowledge Graphs processing tool"
+documentation = "https://docs.rs/pometry-rudof_typing"
 edition.workspace = true
 license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+homepage = "https://github.com/Pometry/rudof"
+repository = "https://github.com/Pometry/rudof"
+
+[lib]
+name = "rudof_typing"
 
 [dependencies]
 either.workspace = true
