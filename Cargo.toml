@@ -361,7 +361,7 @@ spargebra = { package = "pometry-spargebra", version = "0.4.8", features = ["spa
 sparql_service = { package = "pometry-sparql_service", version = "0.3.36", path = "./sparql_service", default-features = false }
 stacker = "0.1"
 supports-color = "3.0.0"
-tabled = { version = "0.20.0", features = ["ansi"] }
+tabled = { version = "0.20.0", default-features = false, features = ["ansi"] }
 tempfile = "3.10.1"
 term_size = "0.3.2"
 testcontainers = "0.27"
