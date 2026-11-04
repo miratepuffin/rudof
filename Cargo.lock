@@ -315,7 +315,7 @@ checksum = "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5"
 
 [[package]]
 name = "bench-issue730"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "rudof_lib",
@@ -324,13 +324,13 @@ dependencies = [
 
 [[package]]
 name = "bench-shex"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "criterion",
- "rudof_iri",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
  "rudof_lib",
- "rudof_rdf",
  "serde",
  "shex_ast",
  "shex_validation",
@@ -1245,13 +1245,13 @@ checksum = "be1e0bca6c3637f992fc1cc7cbc52a78c1ef6db076dbf1059c4323d6a2048376"
 
 [[package]]
 name = "dctap"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "calamine",
  "csv",
  "itertools 0.14.0",
- "rudof_config",
- "rudof_iri",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
  "serde",
  "serde_json",
  "thiserror 2.0.20",
@@ -1468,7 +1468,7 @@ dependencies = [
 
 [[package]]
 name = "emacs-rudof"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "emacs",
@@ -2764,19 +2764,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5449c8c750f1a07ea702bbd212bd999fceece9b3d1508b17023b3e174583124b"
 
 [[package]]
-name = "mie"
-version = "0.3.35"
-dependencies = [
- "hashlink",
- "rudof_iri",
- "serde",
- "serde_json",
- "thiserror 2.0.20",
- "tracing",
- "yaml-rust2",
-]
-
-[[package]]
 name = "mime"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3128,30 +3115,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "oxigraph"
-version = "0.5.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f6632dd080bd07676f06e70254ff5862c9943e9483d700fa7258df73a3f9a6a"
-dependencies = [
- "dashmap",
- "getrandom 0.3.4",
- "js-sys",
- "libc",
- "oxhttp",
- "oxiri 0.2.11",
- "oxrdf",
- "oxrdfio",
- "oxsdatatypes",
- "rand 0.9.5",
- "rustc-hash 2.1.3",
- "siphasher",
- "sparesults",
- "spareval",
- "spargebra",
- "thiserror 2.0.20",
-]
-
-[[package]]
 name = "oxilangtag"
 version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3177,9 +3140,9 @@ dependencies = [
 
 [[package]]
 name = "oxjsonld"
-version = "0.2.6"
+version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86a3e89e005662e60327027f45ec7cefd0472404e01831b5d83a3ac522cfabe0"
+checksum = "f1554d73123a75723a4e0a4d400a3fb19ca09673563a2557090267729622fcb2"
 dependencies = [
  "json-event-parser",
  "oxiri 0.2.11",
@@ -3190,9 +3153,9 @@ dependencies = [
 
 [[package]]
 name = "oxrdf"
-version = "0.3.4"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4be15186205eb60ddbdc2fb47cb25df472c7f399bbe119b68c0972b6b6dd46ea"
+checksum = "08037a3c3cf580d065caec6a864cf97f51be219862d95c691a48c7543406d675"
 dependencies = [
  "hex",
  "oxilangtag",
@@ -3204,51 +3167,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "oxrdfio"
-version = "0.2.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "17b3fe3bb34179c376ab04f2a1b32616b0babab574b3b7eef64d587e60d5e1db"
-dependencies = [
- "oxjsonld",
- "oxrdf",
- "oxrdfxml",
- "oxttl",
- "thiserror 2.0.20",
-]
-
-[[package]]
-name = "oxrdfxml"
+name = "oxsdatatypes"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "71853d12051879f3e424c6864e978f5f5cbecd8e86a9817adbccaefccac9d61d"
-dependencies = [
- "oxilangtag",
- "oxiri 0.2.11",
- "oxrdf",
- "quick-xml 0.37.5",
- "thiserror 2.0.20",
-]
-
-[[package]]
-name = "oxsdatatypes"
-version = "0.2.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c17c2ae62ac34fda465f6331105906c0e17b4e088dac3249e1f229b962062503"
+checksum = "034779b2d182d5069cd28b1f921ba334cad708ab1340db9776312464b6874b78"
 dependencies = [
  "js-sys",
- "thiserror 2.0.20",
-]
-
-[[package]]
-name = "oxttl"
-version = "0.2.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1d0fe19fa62a6a102f85b052bbd86e3cdc3360cd6a338d01bab1a6743bf1d8e"
-dependencies = [
- "memchr",
- "oxilangtag",
- "oxiri 0.2.11",
- "oxrdf",
  "thiserror 2.0.20",
 ]
 
@@ -3393,7 +3317,7 @@ dependencies = [
 
 [[package]]
 name = "pgschema"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "clap",
@@ -3512,6 +3436,298 @@ dependencies = [
 ]
 
 [[package]]
+name = "pometry-mie"
+version = "0.3.36"
+dependencies = [
+ "hashlink",
+ "pometry-rudof_iri",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.20",
+ "tracing",
+ "yaml-rust2",
+]
+
+[[package]]
+name = "pometry-oxigraph"
+version = "0.5.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "76cfa62543bc072ff5c4ff38daed3ed0c72e33b913faad51c3fc44140f86710b"
+dependencies = [
+ "dashmap",
+ "getrandom 0.3.4",
+ "js-sys",
+ "libc",
+ "oxhttp",
+ "oxiri 0.2.11",
+ "oxrdf",
+ "oxsdatatypes",
+ "pometry-oxrdfio",
+ "pometry-sparesults",
+ "pometry-spareval",
+ "pometry-spargebra",
+ "rand 0.9.5",
+ "rustc-hash 2.1.3",
+ "siphasher",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-oxrdfio"
+version = "0.2.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "905c44513944406fcbc30454efb22f0e7ee9cbaea3eae120127ec251af067498"
+dependencies = [
+ "oxjsonld",
+ "oxrdf",
+ "pometry-oxrdfxml",
+ "pometry-oxttl",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-oxrdfxml"
+version = "0.2.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d05a79054a2e8c6e953f3a71b0376defbb0f7e27daf75276461944fdea0cfb76"
+dependencies = [
+ "oxilangtag",
+ "oxiri 0.2.11",
+ "oxrdf",
+ "quick-xml 0.41.0",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-oxttl"
+version = "0.2.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "578a1a2b247c38c83de6041741a95c40591b4a437aefaedd0b07cc1b86004428"
+dependencies = [
+ "memchr",
+ "oxilangtag",
+ "oxiri 0.2.11",
+ "oxrdf",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-prefixmap"
+version = "0.3.36"
+dependencies = [
+ "colored",
+ "indexmap 2.14.2",
+ "pometry-rudof_iri",
+ "proptest",
+ "serde",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-rudof_config"
+version = "0.3.36"
+dependencies = [
+ "dirs",
+ "serde",
+ "thiserror 2.0.20",
+ "toml 0.9.12+spec-1.1.0",
+]
+
+[[package]]
+name = "pometry-rudof_iri"
+version = "0.3.36"
+dependencies = [
+ "getrandom 0.3.4",
+ "getrandom 0.4.3",
+ "indexmap 2.14.2",
+ "oxiri 0.3.1",
+ "oxrdf",
+ "proptest",
+ "reqwest",
+ "serde",
+ "thiserror 2.0.20",
+ "url",
+]
+
+[[package]]
+name = "pometry-rudof_rdf"
+version = "0.3.36"
+dependencies = [
+ "bollard",
+ "colored",
+ "const_format",
+ "csv",
+ "futures",
+ "getrandom 0.3.4",
+ "include_dir",
+ "js-sys",
+ "nix 0.30.1",
+ "once_cell",
+ "oxilangtag",
+ "oxiri 0.3.1",
+ "oxjsonld",
+ "oxrdf",
+ "oxsdatatypes",
+ "paste",
+ "pometry-oxigraph",
+ "pometry-oxrdfio",
+ "pometry-oxrdfxml",
+ "pometry-oxttl",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_viz",
+ "pometry-sparesults",
+ "pometry-spargebra",
+ "proptest",
+ "regex",
+ "reqwest",
+ "rust_decimal",
+ "schemars 1.2.2",
+ "serde",
+ "serde_json",
+ "tabled",
+ "tempfile",
+ "testcontainers",
+ "thiserror 2.0.20",
+ "tokio",
+ "tokio-util",
+ "toml 0.9.12+spec-1.1.0",
+ "tracing",
+ "url",
+ "wasm-bindgen",
+]
+
+[[package]]
+name = "pometry-rudof_typing"
+version = "0.3.36"
+dependencies = [
+ "either",
+]
+
+[[package]]
+name = "pometry-rudof_viz"
+version = "0.3.36"
+dependencies = [
+ "serde",
+ "tempfile",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-shacl"
+version = "0.3.36"
+dependencies = [
+ "anyhow",
+ "dashmap",
+ "either",
+ "indoc",
+ "itertools 0.14.0",
+ "oxrdf",
+ "petgraph 0.8.3",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-rudof_typing",
+ "pometry-sparql_service",
+ "rayon",
+ "rust_decimal",
+ "schemars 1.2.2",
+ "serde",
+ "stacker",
+ "thiserror 2.0.20",
+ "toml 0.9.12+spec-1.1.0",
+ "tracing",
+]
+
+[[package]]
+name = "pometry-sparesults"
+version = "0.3.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "babca6d1f68b9ba9f19879da3de87625b6043bacfcecb577eca033b86a9c8aa5"
+dependencies = [
+ "json-event-parser",
+ "memchr",
+ "oxrdf",
+ "quick-xml 0.41.0",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-spareval"
+version = "0.2.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d07557570c991eb4f896dae2d91722b14f960021617fccef07348ed0759860f2"
+dependencies = [
+ "hex",
+ "json-event-parser",
+ "md-5",
+ "oxiri 0.2.11",
+ "oxrdf",
+ "oxsdatatypes",
+ "pometry-sparesults",
+ "pometry-spargebra",
+ "pometry-sparopt",
+ "rand 0.9.5",
+ "regex",
+ "rustc-hash 2.1.3",
+ "sha1 0.11.0",
+ "sha2",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-spargebra"
+version = "0.4.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c1136f7558312469ef5a55642bf6ec3941df4c7714f7064f3904ac835235105e"
+dependencies = [
+ "oxilangtag",
+ "oxiri 0.2.11",
+ "oxrdf",
+ "peg",
+ "rand 0.9.5",
+ "thiserror 2.0.20",
+]
+
+[[package]]
+name = "pometry-sparopt"
+version = "0.3.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "099abdd4517023d1987665aac6d07ff29c2475ea50c8217a4f0c80ba5754530c"
+dependencies = [
+ "oxrdf",
+ "pometry-spargebra",
+ "rand 0.9.5",
+]
+
+[[package]]
+name = "pometry-sparql_service"
+version = "0.3.36"
+dependencies = [
+ "colored",
+ "const_format",
+ "itertools 0.14.0",
+ "oxrdf",
+ "oxsdatatypes",
+ "pometry-mie",
+ "pometry-oxigraph",
+ "pometry-oxrdfio",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-sparesults",
+ "rust_decimal",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.20",
+ "toml 0.9.12+spec-1.1.0",
+ "tracing",
+]
+
+[[package]]
 name = "portable-atomic"
 version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3561,18 +3777,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "85eae3c4ed2f50dcfe72643da4befc30deadb458a9b590d720cde2f2b1e97da9"
 dependencies = [
  "zerocopy",
-]
-
-[[package]]
-name = "prefixmap"
-version = "0.3.35"
-dependencies = [
- "colored",
- "indexmap 2.14.2",
- "proptest",
- "rudof_iri",
- "serde",
- "thiserror 2.0.20",
 ]
 
 [[package]]
@@ -3805,15 +4009,15 @@ dependencies = [
 
 [[package]]
 name = "pyrudof"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
+ "pometry-rudof_rdf",
  "pyo3",
  "pyo3-stub-gen",
  "pyo3-stub-gen-derive",
  "pythonize",
  "rudof_generate",
  "rudof_lib",
- "rudof_rdf",
  "serde_json",
  "tokio",
 ]
@@ -3830,20 +4034,20 @@ dependencies = [
 
 [[package]]
 name = "quick-xml"
-version = "0.37.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "331e97a1af0bf59823e6eadffe373d7b27f485be8748f71471c662c1f269b7fb"
-dependencies = [
- "memchr",
-]
-
-[[package]]
-name = "quick-xml"
 version = "0.38.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b66c2058c55a409d601666cffe35f04333cf1013010882cec174a7467cd4e21c"
 dependencies = [
  "encoding_rs",
+ "memchr",
+]
+
+[[package]]
+name = "quick-xml"
+version = "0.41.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e660451e55124f798a69a5af3f49ccfbefbd41910eefd25caf2393e1f3473ec1"
+dependencies = [
  "memchr",
 ]
 
@@ -4056,7 +4260,7 @@ dependencies = [
 
 [[package]]
 name = "rbe"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "criterion",
  "either",
@@ -4076,7 +4280,7 @@ dependencies = [
 
 [[package]]
 name = "rbe_testsuite"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "indoc",
@@ -4089,7 +4293,7 @@ dependencies = [
 
 [[package]]
 name = "rdf_config"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "hashlink",
  "indexmap 2.14.2",
@@ -4275,7 +4479,7 @@ dependencies = [
 
 [[package]]
 name = "rudof_cli"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "clap",
@@ -4289,24 +4493,24 @@ dependencies = [
  "lbug",
  "oxrdf",
  "pgschema",
- "prefixmap",
+ "pometry-prefixmap",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-rudof_viz",
+ "pometry-shacl",
+ "pometry-sparql_service",
  "rdf_config",
  "regex",
  "rudof_generate",
- "rudof_iri",
  "rudof_lib",
  "rudof_mcp",
- "rudof_rdf",
- "rudof_viz",
  "rustyline",
  "serde",
  "serde_json",
- "shacl",
  "shapes_comparator",
  "shapes_converter",
  "shex_ast",
  "shlex 1.3.0",
- "sparql_service",
  "supports-color",
  "tabled",
  "tempfile",
@@ -4319,34 +4523,24 @@ dependencies = [
 ]
 
 [[package]]
-name = "rudof_config"
-version = "0.3.35"
-dependencies = [
- "dirs",
- "serde",
- "thiserror 2.0.20",
- "toml 0.9.12+spec-1.1.0",
-]
-
-[[package]]
 name = "rudof_generate"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "chrono",
  "clap",
  "futures",
  "oxrdf",
- "prefixmap",
+ "pometry-prefixmap",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-shacl",
  "rand 0.8.8",
  "rayon",
  "regex",
- "rudof_iri",
- "rudof_rdf",
  "rust_decimal",
  "serde",
  "serde_json",
- "shacl",
  "shex_ast",
  "tempfile",
  "thiserror 2.0.20",
@@ -4357,53 +4551,37 @@ dependencies = [
 ]
 
 [[package]]
-name = "rudof_iri"
-version = "0.3.35"
-dependencies = [
- "getrandom 0.3.4",
- "getrandom 0.4.3",
- "indexmap 2.14.2",
- "oxiri 0.3.1",
- "oxrdf",
- "proptest",
- "reqwest",
- "serde",
- "thiserror 2.0.20",
- "url",
-]
-
-[[package]]
 name = "rudof_lib"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "colored",
  "crossterm",
  "dctap",
  "either",
  "lbug",
- "oxigraph",
  "oxrdf",
  "pgschema",
- "prefixmap",
+ "pometry-oxigraph",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-rudof_viz",
+ "pometry-shacl",
+ "pometry-sparesults",
+ "pometry-sparql_service",
  "rdf_config",
  "regex",
  "reqwest",
- "rudof_config",
  "rudof_generate",
- "rudof_iri",
- "rudof_rdf",
- "rudof_viz",
  "schemars 1.2.2",
  "semver 1.0.28",
  "serde",
  "serde_json",
- "shacl",
  "shapes_comparator",
  "shapes_converter",
  "shex_ast",
  "shex_validation",
- "sparesults",
- "sparql_service",
  "tabled",
  "tempfile",
  "thiserror 2.0.20",
@@ -4416,7 +4594,7 @@ dependencies = [
 
 [[package]]
 name = "rudof_mcp"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "axum",
@@ -4436,78 +4614,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "rudof_rdf"
-version = "0.3.35"
-dependencies = [
- "bollard",
- "colored",
- "const_format",
- "csv",
- "futures",
- "getrandom 0.3.4",
- "include_dir",
- "js-sys",
- "nix 0.30.1",
- "once_cell",
- "oxigraph",
- "oxilangtag",
- "oxiri 0.3.1",
- "oxjsonld",
- "oxrdf",
- "oxrdfio",
- "oxrdfxml",
- "oxsdatatypes",
- "oxttl",
- "paste",
- "prefixmap",
- "proptest",
- "regex",
- "reqwest",
- "rudof_config",
- "rudof_iri",
- "rudof_viz",
- "rust_decimal",
- "schemars 1.2.2",
- "serde",
- "serde_json",
- "sparesults",
- "spargebra",
- "tabled",
- "tempfile",
- "testcontainers",
- "thiserror 2.0.20",
- "tokio",
- "tokio-util",
- "toml 0.9.12+spec-1.1.0",
- "tracing",
- "url",
- "wasm-bindgen",
-]
-
-[[package]]
-name = "rudof_typing"
-version = "0.3.35"
-dependencies = [
- "either",
-]
-
-[[package]]
-name = "rudof_viz"
-version = "0.3.35"
-dependencies = [
- "serde",
- "tempfile",
- "thiserror 2.0.20",
-]
-
-[[package]]
 name = "rudof_wasm"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "console_error_panic_hook",
  "js-sys",
+ "pometry-rudof_rdf",
  "rudof_lib",
- "rudof_rdf",
  "serde",
  "serde-wasm-bindgen",
  "serde_json",
@@ -5079,71 +5192,44 @@ dependencies = [
 ]
 
 [[package]]
-name = "shacl"
-version = "0.3.35"
-dependencies = [
- "anyhow",
- "dashmap",
- "either",
- "indoc",
- "itertools 0.14.0",
- "oxrdf",
- "petgraph 0.8.3",
- "prefixmap",
- "rayon",
- "rudof_config",
- "rudof_iri",
- "rudof_rdf",
- "rudof_typing",
- "rust_decimal",
- "schemars 1.2.2",
- "serde",
- "sparql_service",
- "stacker",
- "thiserror 2.0.20",
- "toml 0.9.12+spec-1.1.0",
- "tracing",
-]
-
-[[package]]
 name = "shapes_comparator"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
- "prefixmap",
- "rudof_config",
- "rudof_iri",
- "rudof_rdf",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-shacl",
+ "pometry-sparql_service",
  "serde",
  "serde_json",
- "shacl",
  "shex_ast",
  "shex_validation",
- "sparql_service",
  "thiserror 2.0.20",
  "tracing",
 ]
 
 [[package]]
 name = "shapes_converter"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "chrono",
  "dctap",
  "either",
- "mie",
  "minijinja",
- "prefixmap",
+ "pometry-mie",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-rudof_viz",
+ "pometry-shacl",
+ "pometry-spargebra",
+ "pometry-sparql_service",
  "rdf_config",
- "rudof_config",
- "rudof_iri",
- "rudof_rdf",
- "rudof_viz",
  "serde",
- "shacl",
  "shex_ast",
  "shex_validation",
- "spargebra",
- "sparql_service",
  "tempfile",
  "thiserror 2.0.20",
  "toml 0.9.12+spec-1.1.0",
@@ -5162,7 +5248,7 @@ dependencies = [
 
 [[package]]
 name = "shex_ast"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "colored",
  "const_format",
@@ -5173,14 +5259,14 @@ dependencies = [
  "nom_locate",
  "oxrdf",
  "petgraph 0.8.3",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
  "postcard",
- "prefixmap",
  "pretty",
  "rbe",
  "regex",
- "rudof_config",
- "rudof_iri",
- "rudof_rdf",
  "rust_decimal",
  "schemars 1.2.2",
  "serde",
@@ -5194,13 +5280,13 @@ dependencies = [
 
 [[package]]
 name = "shex_testsuite"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "anyhow",
  "clap",
- "prefixmap",
- "rudof_iri",
- "rudof_rdf",
+ "pometry-prefixmap",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
  "serde",
  "serde_json",
  "shex_ast",
@@ -5214,18 +5300,18 @@ dependencies = [
 
 [[package]]
 name = "shex_validation"
-version = "0.3.35"
+version = "0.3.36"
 dependencies = [
  "colored",
  "either",
  "indexmap 2.14.2",
  "itertools 0.14.0",
- "prefixmap",
+ "pometry-prefixmap",
+ "pometry-rudof_config",
+ "pometry-rudof_iri",
+ "pometry-rudof_rdf",
+ "pometry-rudof_typing",
  "rbe",
- "rudof_config",
- "rudof_iri",
- "rudof_rdf",
- "rudof_typing",
  "serde",
  "serde_json",
  "shex_ast",
@@ -5328,92 +5414,6 @@ checksum = "c3d1e2c7f27f8d4cb10542a02c49005dbd6e93095799d6f3be745fae9f8fedd4"
 dependencies = [
  "libc",
  "windows-sys 0.61.2",
-]
-
-[[package]]
-name = "sparesults"
-version = "0.3.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5dfa99dba6f5155ef4fdd75b78f794ea0c729e17b07d84eb88ae3c1278d1758d"
-dependencies = [
- "json-event-parser",
- "memchr",
- "oxrdf",
- "quick-xml 0.37.5",
- "thiserror 2.0.20",
-]
-
-[[package]]
-name = "spareval"
-version = "0.2.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85b51144836ff9ca2f792b7a2422c4170ff04460d86cd8f2f764cf53e339cbec"
-dependencies = [
- "hex",
- "json-event-parser",
- "md-5",
- "oxiri 0.2.11",
- "oxrdf",
- "oxsdatatypes",
- "rand 0.9.5",
- "regex",
- "rustc-hash 2.1.3",
- "sha1 0.11.0",
- "sha2",
- "sparesults",
- "spargebra",
- "sparopt",
- "thiserror 2.0.20",
-]
-
-[[package]]
-name = "spargebra"
-version = "0.4.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bef3c186ffb9bf2dde7c5edd5528583f309fcb819b5773cf0e313194a990304f"
-dependencies = [
- "oxilangtag",
- "oxiri 0.2.11",
- "oxrdf",
- "peg",
- "rand 0.9.5",
- "thiserror 2.0.20",
-]
-
-[[package]]
-name = "sparopt"
-version = "0.3.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "973ee503ab3d6c3de66b4b459233cd5b22b44dad0fb7b8d0931daf73d2ede935"
-dependencies = [
- "oxrdf",
- "rand 0.9.5",
- "spargebra",
-]
-
-[[package]]
-name = "sparql_service"
-version = "0.3.35"
-dependencies = [
- "colored",
- "const_format",
- "itertools 0.14.0",
- "mie",
- "oxigraph",
- "oxrdf",
- "oxrdfio",
- "oxsdatatypes",
- "prefixmap",
- "rudof_config",
- "rudof_iri",
- "rudof_rdf",
- "rust_decimal",
- "serde",
- "serde_json",
- "sparesults",
- "thiserror 2.0.20",
- "toml 0.9.12+spec-1.1.0",
- "tracing",
 ]
 
 [[package]]
